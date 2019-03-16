@@ -26,3 +26,8 @@ I have planned to use 2 type of Neural Network models
 - [ ] Training Loop 
 - [ ] Testing Loop
 - [ ] Choose best architecture and pretrained model
+
+## References
+1. http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w3/Kumar_A_Semi-Automatic_2D_CVPR_2018_paper.pdf
+2. http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w3/Hua_Vehicle_Tracking_and_CVPR_2018_paper.pdf
+3. https://arxiv.org/abs/1411.4555
