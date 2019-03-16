@@ -1,4 +1,4 @@
-# Vehicle_Speed_Estimation
+# Vehicle Speed Estimation
 Estimating the speed of a vehicle given its camera image using Computer vision techniques and Deep Learning.
 I have planned to use 2 type of Neural Network models
 1. Convolutional neural network CNN
@@ -12,7 +12,7 @@ I have planned to use 2 type of Neural Network models
 - [x] to Numpy
 - [x] Train Test Split
 - [x]  to Tensor
-- [ ]  Data Loader
+- [x]  Data Loader
 - [ ] Transforms for image tensors(Normalize, .....)
 
 ### CNN - Label Model
