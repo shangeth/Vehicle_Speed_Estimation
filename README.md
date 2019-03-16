@@ -17,3 +17,9 @@
 - [ ] Training Loop 
 - [ ] Testing Loop
 - [ ] Choose best architecture and pretrained model
+
+### CNN - RNN - Label Model
+- [ ] Transfer Learning CNN-RNN-Label
+- [ ] Training Loop 
+- [ ] Testing Loop
+- [ ] Choose best architecture and pretrained model
