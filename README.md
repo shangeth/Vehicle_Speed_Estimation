@@ -11,3 +11,9 @@
 - [x]  to Tensor
 - [ ]  Data Loader
 - [ ] Transforms for image tensors(Normalize, .....)
+
+### CNN - Label Model
+- [ ] Transfer Learning CNN-Label
+- [ ] Training Loop 
+- [ ] Testing Loop
+- [ ] Choose best architecture and pretrained model
