@@ -13,12 +13,12 @@ I have planned to use 2 type of Neural Network models
 - [x] Train Test Split
 - [x]  to Tensor
 - [x]  Data Loader
-- [ ] Transforms for image tensors(Normalize, .....)
+- [x] Transforms for image tensors(Normalize, .....)
 
 ### CNN - Label Model
-- [ ] Transfer Learning CNN-Label
-- [ ] Training Loop 
-- [ ] Testing Loop
+- [x] Transfer Learning CNN-Label
+- [x] Training Loop 
+- [x] Testing Loop
 - [ ] Choose best architecture and pretrained model
 
 ### CNN - RNN - Label Model
