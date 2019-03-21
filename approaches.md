@@ -128,4 +128,10 @@ But the problem is the same arrangement can be seen also when the speed = 0, So 
 So using only CNNs can help us to some extent , but cannot be used for maximum accuracy, as for self driving cars increment in each decimal accuracy matters.
 
 
+### Human Insight on speed estimation during car journey
+As CNNs failed to give us good estimation of speed(atleast in my case, as i do not have more computing power to train more), we can analyse how a human will try to estimate the speed of a car(atleast relative).
+
+To estimate a speed, we decide a reference point/place and we can estimate the relative speed by observing the difference at t th second and t+1 th second. By this we can observe(if not the accuracte estimate) the relative velocity of the car.
+
+As the camera is in the car, the change in frames can help the model to find the relative change in other vehicle positions and the velocity of the car itself.
 
