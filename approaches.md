@@ -149,3 +149,44 @@ We again use transfer learning to extract features from the images(due to comput
 I will again use AlexNet, for computational reason, as its one of the less computationally expensive pretrained model.
 
 #### Adding Recurrent layer to the model 
+
+```python
+class CNNRNN(nn.Module):
+    def __init__(self, n_layers=2, hidden_size=512):
+        super(CNNRNN, self).__init__()
+        self.hidden_size = hidden_size
+        self.n_layers = n_layers
+        model = speed_CNN()
+        self.cnn = model
+
+        self.rnn = nn.LSTM(256, hidden_size, dropout=0.2, num_layers=n_layers)
+        self.fc = nn.Sequential(
+            nn.Linear(hidden_size, 256),
+            nn.ReLU(),
+            nn.Dropout(0.25),
+            nn.Linear(256, 64),
+            nn.ReLU(),
+            nn.Dropout(0.25),
+            nn.Linear(64, 1),
+            nn.ReLU())
+
+    def _init_state(self, b_size=1):
+        weight = next(self.parameters()).data
+        return (
+            Variable(weight.new(self.n_layers, b_size, self.hidden_size).normal_(0.0, 0.01)),
+            Variable(weight.new(self.n_layers, b_size, self.hidden_size).normal_(0.0, 0.01))
+        )
+      
+    def forward(self, x):
+        batch_size, timesteps = x.size()[0], x.size()[2]
+        state = self._init_state(b_size=batch_size)
+        cnns = []
+        for t in range(timesteps):
+            cnn = self.cnn(x[:, :, t, :, :])
+            cnn = cnn.view(batch_size, -1)
+            cnns.append(cnn)
+        cnns = torch.stack(cnns, 0)
+        rnn, _ = self.rnn(cnns, state)
+        pred = self.fc(rnn[-1])
+        return pred
+```
