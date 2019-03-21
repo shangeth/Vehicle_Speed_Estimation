@@ -138,3 +138,5 @@ As the camera is in the car, the change in frames can help the model to find the
 
 ### Time series Data
 We will use the previous data also woth current data to estimate the velocity. The best was to do this is to extract the features of the images with a CNNs and use RNNs to use previous data and current data to estimate the velocity.
+
+![](https://i.stack.imgur.com/FuxJA.png)
