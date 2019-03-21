@@ -192,6 +192,27 @@ class CNNRNN(nn.Module):
 ```
 ### [Neural Arithmetic Logic Units](https://github.com/shangeth/Neural-Arithmetic-Logic-Units-Pytorch) 
 ![](https://cdn-images-1.medium.com/max/1200/1*fJxEhikTep_gZhG5v5O1Jw.png)
+```python
+class NALU(nn.Module):
+    def __init__(self, in_dim, out_dim, e=1e-5):
+        super(NALU, self).__init__()
+        self.e = e
+        self.G = Parameter(torch.Tensor(out_dim, in_dim))
+        self.W = Parameter(torch.Tensor(out_dim, in_dim))
+        self.register_parameter('Gbias', None)
+        self.register_parameter('Wbias', None)
+        self.nac = NeuralAccumulator(in_dim, out_dim)
+        
+        nn.init.xavier_uniform_(self.G)
+        nn.init.xavier_uniform_(self.W)
+        
+    def forward(self, x):
+        a = self.nac(x)
+        g = torch.sigmoid(nn.functional.linear(x, self.G, self.Gbias))
+        m = torch.exp(nn.functional.linear(torch.log(torch.abs(x) + self.e), self.W, self.Wbias))
+        out = g*a + (1-g)*m
+        return out
+```
 
 ### Optical Flow vectors
 Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene. -Wiki
