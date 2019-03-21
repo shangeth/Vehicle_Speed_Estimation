@@ -133,5 +133,8 @@ As CNNs failed to give us good estimation of speed(atleast in my case, as i do n
 
 To estimate a speed, we decide a reference point/place and we can estimate the relative speed by observing the difference at t th second and t+1 th second. By this we can observe(if not the accuracte estimate) the relative velocity of the car.
 
-As the camera is in the car, the change in frames can help the model to find the relative change in other vehicle positions and the velocity of the car itself.
+As the camera is in the car, the change in frames can help the model to find the relative change in other vehicle positions and the velocity of the car itself. And previous velocity will affect the current velocity of the car. If the car was moving at a speed of 30 units, it cannot suddent go to zero in the next frame , so the speed will be 30(+/-)x. x will be a small number.
 
+
+### Time series Data
+We will use the previous data also woth current data to estimate the velocity. The best was to do this is to extract the features of the images with a CNNs and use RNNs to use previous data and current data to estimate the velocity.
