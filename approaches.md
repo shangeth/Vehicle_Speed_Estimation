@@ -125,4 +125,7 @@ CNNs consider only the current data which you provide, it learns for some cars a
 ![](Images/img1.png)
 
 But the problem is the same arrangement can be seen also when the speed = 0, So the CNN model doen't actually learn/observe the movement, rather it learns the positions and placements of vehicles,..etc. 
+So using only CNNs can help us to some extent , but cannot be used for maximum accuracy, as for self driving cars increment in each decimal accuracy matters.
+
+
 
