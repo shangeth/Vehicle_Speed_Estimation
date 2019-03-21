@@ -194,3 +194,6 @@ class CNNRNN(nn.Module):
 ### Optical Flow vectors
 Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene. -Wiki
 ![](https://slideplayer.com/slide/5034827/16/images/5/What+is+Optical+Flow+Optical+Flow.jpg)
+
+
+The definition of optical flow seems to be something related to what we wanted the RNN-CNN model to do. It is the relative movement of the frames with each other. We actually wanted to RNN-CNN model to learn all these compelx features without explicitly stating. But as the computation is expensive(for GPU available to me) , i will try using Optical flow to get the relative change in frame and thus relative change in velocity, so it can reduce the computation a little.
