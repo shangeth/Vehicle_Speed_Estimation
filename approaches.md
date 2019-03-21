@@ -45,10 +45,10 @@ classifier = torch.nn.Sequential(nn.Linear(512, 256),
                            nn.Linear(256, 128),
                            nn.ReLU(),
                            nn.Dropout(0.2),
-                           NALU(128, 64),
+                           nn.Linear(128, 64),
                            nn.ReLU(),
                            nn.Dropout(0.2),
-                           NALU(64, 1),
+                           nn.Linear(64, 1),
                            nn.ReLU())
 model.fc = classifier
 ```
