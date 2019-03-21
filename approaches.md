@@ -146,3 +146,6 @@ This model can consider some features from the previous data and now the estimat
 
 #### Transfer Learning for CNNs
 We again use transfer learning to extract features from the images(due to computational purposes and the advantage of learnt features from million of data).
+I will again use AlexNet, for computational reason, as its one of the less computationally expensive pretrained model.
+
+#### Adding Recurrent layer to the model 
