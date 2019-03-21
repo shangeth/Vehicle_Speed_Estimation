@@ -27,11 +27,28 @@ As the data involves vehicles, pedestrians, ...etc, it is not possible for me to
 We first keep the pre trained weights of CNN layers and add a FCC classifier in the end and train the classifier for our task with MSELoss. Later we unfreeze some CNN layers so that the CNNs extract the features which are needed for the task.
 
 ```python
-model = models.X(pretrained=True)   
+model = torchvision.models.X(pretrained=True)   
 for param in model.parameters():
     param.requires_grad = False
     
 for param in model.selected_features.parameters():
     param.requires_grad = True
 
+```
+X - any pretrained model of choice(due to computational purpose i used AlexNet, I tried using other models too but they were very slow in training)
+
+And add a trainable classifier at the end
+```python
+classifier = torch.nn.Sequential(nn.Linear(512, 256),
+                           nn.ReLU(),
+                           nn.Dropout(0.2),
+                           nn.Linear(256, 128),
+                           nn.ReLU(),
+                           nn.Dropout(0.2),
+                           NALU(128, 64),
+                           nn.ReLU(),
+                           nn.Dropout(0.2),
+                           NALU(64, 1),
+                           nn.ReLU())
+model.fc = classifier
 ```
