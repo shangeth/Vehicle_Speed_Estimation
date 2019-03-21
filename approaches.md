@@ -190,6 +190,8 @@ class CNNRNN(nn.Module):
         pred = self.fc(rnn[-1])
         return pred
 ```
+### [Neural Arithmetic Logic Units](https://github.com/shangeth/Neural-Arithmetic-Logic-Units-Pytorch) 
+
 
 ### Optical Flow vectors
 Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene. -Wiki
