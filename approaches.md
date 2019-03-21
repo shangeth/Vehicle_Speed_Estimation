@@ -26,7 +26,7 @@ As the data involves vehicles, pedestrians, ...etc, it is not possible for me to
 
 We first keep the pre trained weights of CNN layers and add a FCC classifier in the end and train the classifier for our task with MSELoss. Later we unfreeze some CNN layers so that the CNNs extract the features which are needed for the task.
 
-'''python
+```python
 model = models.X(pretrained=True)   
 for param in model.parameters():
     param.requires_grad = False
@@ -34,4 +34,4 @@ for param in model.parameters():
 for param in model.selected_features.parameters():
     param.requires_grad = True
 
-'''
+```
