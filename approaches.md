@@ -213,6 +213,16 @@ class NALU(nn.Module):
         out = g*a + (1-g)*m
         return out
 ```
+You can check about NALU in the repository linked or the original paper.
+My previous paper was primarily on using Neural Arithmetic Logic units on extrapolation tasks, in which i tired to predict the future stock price with Feature extraction property of CNN and NALU. 
+Neural Arithmetic logic units in a sense enlarges the input space which makes it robust to a larger range of input space. So 
+
+How is Neural Arithmetic Logic Units related to this task?
+The speed of a car is not a bounded input space(ofcourse it cannot be inifinity or even very large value), bounded in the sense, although the training dataset has a range of lets say [0, 40] , the speed of the car can also be 50, which is not in the training set, so the model does not consider it. Neural arithmetic logic units are good with arithmetic operations and will expand the space , such that even if the training set is bounded, the model tires to reach more than the boundary.
+
+I also made model using CNN and Neural Arithmetic Logic units, and can actually see good results than only CNN model.
+
+
 
 ### Optical Flow vectors
 Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene. -Wiki
