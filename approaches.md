@@ -15,3 +15,6 @@ So we crop out the sky and the car dash.
 
 ![](Images/cropped.png)
 
+and resize it into a square matrix to feed it to the neural network
+
+![](Images/resized.png)
