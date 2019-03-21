@@ -19,13 +19,13 @@ I have planned to use 2 type of Neural Network models
 - [x] Transfer Learning CNN-Label
 - [x] Training Loop 
 - [x] Testing Loop
-- [ ] Choose best architecture and pretrained model
+- [x] Choose best architecture and pretrained model
 
 ### CNN - RNN - Label Model
-- [ ] Transfer Learning CNN-RNN-Label
-- [ ] Training Loop 
-- [ ] Testing Loop
-- [ ] Choose best architecture and pretrained model
+- [x] Transfer Learning CNN-RNN-Label
+- [x] Training Loop 
+- [x] Testing Loop
+- [x] Choose best architecture and pretrained model
 
 ## References
 1. http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w3/Kumar_A_Semi-Automatic_2D_CVPR_2018_paper.pdf
