@@ -123,4 +123,6 @@ Although the Model was able to learn the data to an extent, the output of the mo
 ##### why is that so? 
 CNNs consider only the current data which you provide, it learns for some cars and road positions the speed has to be something.
 ![](Images/img1.png)
-But the problem is the same arrangement can be seen also when the speed = 0, 
+
+But the problem is the same arrangement can be seen also when the speed = 0, So the CNN model doen't actually learn/observe the movement, rather it learns the positions and placements of vehicles,..etc. 
+
