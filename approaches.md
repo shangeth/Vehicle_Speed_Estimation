@@ -136,7 +136,9 @@ To estimate a speed, we decide a reference point/place and we can estimate the r
 As the camera is in the car, the change in frames can help the model to find the relative change in other vehicle positions and the velocity of the car itself. And previous velocity will affect the current velocity of the car. If the car was moving at a speed of 30 units, it cannot suddent go to zero in the next frame , so the speed will be 30(+/-)x. x will be a small number.
 
 
-### Time series Data
+### Time series Learning - Recurrent Neural Networks
 We will use the previous data also woth current data to estimate the velocity. The best was to do this is to extract the features of the images with a CNNs and use RNNs to use previous data and current data to estimate the velocity.
 
 ![](https://i.stack.imgur.com/FuxJA.png)
+
+This model can consider some features from the previous data and now the estimation becomes little easier as the model will have reference points to estimate relative velocity and fint the current velocity.
