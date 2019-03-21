@@ -87,7 +87,7 @@ AlexNet(
 )
 ```
 
-When the model is trained with Adam Optimizer with lr=1e-3 for 50 epochs, 
+When the model is trained with Adam Optimizer with lr=1e-3 for 50 epochs, without scaling the target (MSELoss)
 ```
 Epoch: 1/50  Training Loss: 191.244  Test Loss: 26.860 
 Validation loss decreased (inf --> 26.860056).  Saving model ...
@@ -115,3 +115,12 @@ Epoch: 14/50  Training Loss: 20.422  Test Loss: 14.730
 ...
 ...
 ```
+
+#### Observation and Conclusion for CNN-FCC Model
+The model seem to converge very fast in the beginning and was observed to stop learning much after few epochs.
+Although the Model was able to learn the data to an extent, the output of the model was observed to be nearly same for all the data.
+
+##### why is that so? 
+CNNs consider only the current data which you provide, it learns for some cars and road positions the speed has to be something.
+![](Images/img1.png)
+But the problem is the same arrangement can be seen also when the speed = 0, 
