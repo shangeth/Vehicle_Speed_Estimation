@@ -141,4 +141,8 @@ We will use the previous data also woth current data to estimate the velocity. T
 
 ![](https://i.stack.imgur.com/FuxJA.png)
 
-This model can consider some features from the previous data and now the estimation becomes little easier as the model will have reference points to estimate relative velocity and fint the current velocity.
+This model can consider some features from the previous data and now the estimation becomes little easier as the model will have reference points to estimate relative velocity and find the current velocity.
+
+
+#### Transfer Learning for CNNs
+We again use transfer learning to extract features from the images(due to computational purposes and the advantage of learnt features from million of data).
