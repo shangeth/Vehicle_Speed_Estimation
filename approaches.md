@@ -193,3 +193,4 @@ class CNNRNN(nn.Module):
 
 ### Optical Flow vectors
 Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene. -Wiki
+![](https://slideplayer.com/slide/5034827/16/images/5/What+is+Optical+Flow+Optical+Flow.jpg)
