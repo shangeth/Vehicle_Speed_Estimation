@@ -231,3 +231,7 @@ Optical flow is the pattern of apparent motion of objects, surfaces, and edges i
 
 The definition of optical flow seems to be something related to what we wanted the RNN-CNN model to do. It is the relative movement of the frames with each other. We actually wanted to RNN-CNN model to learn all these compelx features without explicitly stating. But as the computation is expensive(for GPU available to me) , i will try using Optical flow to get the relative change in frame and thus relative change in velocity, so it can reduce the computation a little.
 
+
+### Road movement analysis
+To make the task more simple and computationally inexpensive, i also wanted to try looking the road points to estimate the speed.So i cropped the image into just the road and reduced the channel into grayscale as road colour is usually black and white.
+
