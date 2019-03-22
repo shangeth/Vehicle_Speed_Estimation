@@ -235,6 +235,6 @@ The definition of optical flow seems to be something related to what we wanted t
 ### Road movement analysis
 To make the task more simple and computationally inexpensive, i also wanted to try looking the road points to estimate the speed.So i cropped the image into just the road and reduced the channel into grayscale as road colour is usually black and white and reshaped it into (100,100,1) tensor.
 CNN-FCC network is used to analyse if the movement of the road keypoints gives the estimation of the speed.
-![](
+![](Images/raod1.png)
 
 
